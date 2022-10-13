@@ -1,13 +1,9 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -20,3 +16,9 @@ components:
     format: markdown}
   name: leaderboard_title
   layout_properties: {slot: title}
+- type: RepeatingPanel
+  properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+    visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate1,
+    background: ''}
+  name: repeating_panel_1
+  layout_properties: {slot: default}
