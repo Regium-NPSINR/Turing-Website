@@ -3,6 +3,7 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:standard-page.html'}
+  event_bindings: {}
 components:
 - type: FlowPanel
   properties: {}
@@ -16,9 +17,7 @@ components:
     format: markdown}
   name: leaderboard_title
   layout_properties: {slot: title}
-- type: RepeatingPanel
-  properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-    visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate1,
-    background: ''}
-  name: repeating_panel_1
+- type: ColumnPanel
+  properties: {}
+  name: body
   layout_properties: {slot: default}
