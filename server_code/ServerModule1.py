@@ -18,3 +18,6 @@ import anvil.server
 
 
 @anvil.server.callable
+def set_play_score(team_id, score):
+    # set team's score to score
+    pass
