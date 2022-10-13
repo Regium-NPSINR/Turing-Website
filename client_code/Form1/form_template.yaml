@@ -17,3 +17,30 @@ components:
     format: markdown}
   name: leaderboard_title
   layout_properties: {slot: title}
+- type: DataGrid
+  properties:
+    role: tonal-data-grid
+    columns:
+    - {id: BGNVPX, title: Team, data_key: column_1, $$hashKey: 'object:13713', width: 612,
+      expand: false}
+    - {id: NYXGAF, title: Column 2, data_key: column_2, $$hashKey: 'object:13714'}
+    auto_header: false
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 10
+    visible: true
+    wrap_on: never
+    show_page_controls: false
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_1
+  layout_properties: {slot: default}
+  components:
+  - type: RepeatingPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+      visible: true, spacing_above: none, spacing_below: none, item_template: Form1.RowTemplate1,
+      background: ''}
+    name: repeating_panel_1
+    layout_properties: {}
