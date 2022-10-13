@@ -16,5 +16,5 @@ class Home(HomeTemplate):
 		"""This method is called when the button is clicked"""
 		team_no = 0
 		score = int(self.score_text_box.text)
-		msg = anvil.server.call('set_play_score', team_no, score)
-		alert(msg)
+		for i in anvil.server.call('set_play_score', team_no, score):
+			alert(f'Team no.: {i[0]}\nTeam name: {i[1]}\nScore: {i[2]}')

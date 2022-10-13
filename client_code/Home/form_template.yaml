@@ -17,6 +17,7 @@ components:
     format: markdown}
   name: leaderboard_title
   layout_properties: {slot: title}
+<<<<<<< HEAD:client_code/Home/form_template.yaml
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: body
@@ -38,3 +39,32 @@ components:
     properties: {}
     name: score_label
     layout_properties: {grid_position: 'ADSTGY,XQZQOH'}
+=======
+- type: DataGrid
+  properties:
+    role: tonal-data-grid
+    columns:
+    - {id: BGNVPX, title: Team, data_key: column_1, $$hashKey: 'object:13713', width: 612,
+      expand: false}
+    - {id: NYXGAF, title: Column 2, data_key: column_2, $$hashKey: 'object:13714'}
+    auto_header: false
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 10
+    visible: true
+    wrap_on: never
+    show_page_controls: false
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_1
+  layout_properties: {slot: default}
+  components:
+  - type: RepeatingPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+      visible: true, spacing_above: none, spacing_below: none, item_template: Form1.RowTemplate1,
+      background: ''}
+    name: repeating_panel_1
+    layout_properties: {}
+>>>>>>> 49d03e217e985d19cbbb17b8b85cc4c0c0ba6730:client_code/Form1/form_template.yaml

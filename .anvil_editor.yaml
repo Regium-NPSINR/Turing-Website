@@ -1,6 +1,12 @@
 unique_ids:
   forms:
+<<<<<<< HEAD
     Home: 5SBLSHROVETRE44YPE5V2W5HMUCMI7QN
+=======
+    Form1: 5SBLSHROVETRE44YPE5V2W5HMUCMI7QN
+    Form1.ItemTemplate1: '1665648174384512969068656.4542'
+    Form1.RowTemplate1: '1665651150544944001353335.0103'
+>>>>>>> 49d03e217e985d19cbbb17b8b85cc4c0c0ba6730
   modules: {}
   server_modules:
     ServerModule: '1665649249393120948769256.66153'
