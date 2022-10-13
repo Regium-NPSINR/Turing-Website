@@ -12,3 +12,11 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- type: RichText
+  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+    foreground: '', visible: true, font_size: null, content: 'Leaderboard
+
+      ', font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+    format: markdown}
+  name: leaderboard_title
+  layout_properties: {slot: title}
