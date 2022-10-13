@@ -17,7 +17,3 @@ components:
     format: markdown}
   name: leaderboard_title
   layout_properties: {slot: title}
-- type: ColumnPanel
-  properties: {}
-  name: body
-  layout_properties: {slot: default}
