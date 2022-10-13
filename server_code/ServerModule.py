@@ -18,6 +18,7 @@ import anvil.server
 
 
 @anvil.server.callable
-def set_play_score(team_id, score):
-    # set team's score to new score
-    pass
+def set_play_score(team_no, score):
+	# set team's score to new score
+	print(team_no, score)
+	return f'The team\'s score is {score}'

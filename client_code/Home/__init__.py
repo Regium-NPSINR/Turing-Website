@@ -6,13 +6,15 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Home(HomeTemplate):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+	def __init__(self, **properties):
+		# Set Form properties and Data Bindings.
+		self.init_components(**properties)
 
-    # Any code you write here will run when the form opens.
+		# Any code you write here will run when the form opens.
 
-  def on_score_button_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      pass
-
+	def on_score_button_click(self, **event_args):
+		"""This method is called when the button is clicked"""
+		team_no = 0
+		score = int(self.score_text_box.text)
+		msg = anvil.server.call('set_play_score', team_no, score)
+		alert(msg)
