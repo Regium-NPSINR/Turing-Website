@@ -74,3 +74,7 @@ def get_score(team_no):
 
 	# Team exists
 	return app_tables.leaderboard.get(team_no = team_no)['team_score']
+
+@anvil.server.callable
+def get_leaderboard():
+	return app_tables.leaderboard.search()
