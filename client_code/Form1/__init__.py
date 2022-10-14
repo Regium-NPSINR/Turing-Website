@@ -23,7 +23,8 @@ class Form1(Form1Template):
             self.timer_1.interval = 1
             self.timer_button.text == "Pause Timer"
         elif self.timer_button.text == "Pause Timer":
-            self.
+            self.timer_1.interval = 0
+            self.timer_button.text = "Start Timer"
           
 
 
