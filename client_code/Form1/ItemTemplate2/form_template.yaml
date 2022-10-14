@@ -11,7 +11,8 @@ components:
   components:
   - type: DataRowPanel
     properties: {}
-    name: data_row_panel_1
+    name: list_item
     layout_properties: {grid_position: 'HOODGP,JSNWQI'}
+    components: []
 is_package: true
 component: []
