@@ -9,7 +9,7 @@ components:
   properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
     foreground: '', visible: true, font_size: null, content: '# Regium ''22 - Turing
 
-      ## j
+      ###
 
       ', font: '', spacing_above: small, spacing_below: small, data: null, background: '',
     format: markdown}
