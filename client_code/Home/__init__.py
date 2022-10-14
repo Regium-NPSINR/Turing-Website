@@ -11,7 +11,7 @@ class Home(HomeTemplate):
 		self.init_components(**properties)
 
 		# Any code you write here will run when the form opens.
-	def add_team(self, **event_args):
+	def on_add_team_click(self, **event_args):
 		"""This method is called when the button is clicked"""
 		team_no = int(self.team_1.text)
 		team_name = self.team_name.text

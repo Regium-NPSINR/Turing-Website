@@ -45,7 +45,7 @@ components:
       underline: false, icon: ''}
     name: add_team
     layout_properties: {grid_position: 'OOUBVM,REPSRL'}
-    event_bindings: {click: add_team}
+    event_bindings: {click: on_add_team_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Set score, font_size: null, font: '', spacing_above: small,
