@@ -22,17 +22,16 @@ components:
     properties:
       role: null
       columns:
-      - {id: TWMGFM, title: Column 1, data_key: column_1, $$hashKey: 'object:1194'}
-      - {id: LCTZXT, title: Column 2, data_key: column_2, $$hashKey: 'object:1195'}
-      - {id: RZUUUV, title: Column 3, data_key: column_3, $$hashKey: 'object:1196'}
-      auto_header: true
+      - {id: TWMGFM, title: Column 1, data_key: column_1, $$hashKey: 'object:1206'}
+      - {id: LCTZXT, title: Column 2, data_key: column_2, $$hashKey: 'object:1207'}
+      auto_header: false
       tooltip: ''
       border: ''
       foreground: ''
       rows_per_page: 20
       visible: true
       wrap_on: never
-      show_page_controls: true
+      show_page_controls: false
       spacing_above: small
       spacing_below: small
       background: ''
