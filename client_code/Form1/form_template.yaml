@@ -17,3 +17,9 @@ components:
     format: markdown}
   name: leaderboard_title
   layout_properties: {slot: title}
+- type: RepeatingPanel
+  properties: {role: outlined-card, tooltip: '', border: '', foreground: '', items: null,
+    visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate2,
+    background: ''}
+  name: leaderboard_list
+  layout_properties: {slot: default}
