@@ -18,7 +18,7 @@ class Form1(Form1Template):
     def timer_1_tick(self, **event_args):
         """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
         self.time_left -= 1
-        self.time_remaining.text = str(time)
+        self.time_remaining.text = str(timedelta(seconds=self.time_left))
     
     def timer_button_click(self, **event_args):
         """This method is called when the button is clicked"""
