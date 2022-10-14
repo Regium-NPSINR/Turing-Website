@@ -4,9 +4,14 @@ container:
 components:
 - type: ColumnPanel
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: ''}
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: outlined_card_1
   layout_properties: {grid_position: 'CAXIQL,NRASIW'}
+  components:
+  - type: DataRowPanel
+    properties: {}
+    name: data_row_panel_1
+    layout_properties: {grid_position: 'HOODGP,JSNWQI'}
 is_package: true
 component: []
