@@ -11,5 +11,19 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {title: Turing Leaderboard}
 startup_form: null
-db_schema: {}
+db_schema:
+  leaderboard:
+    title: Leaderboard
+    client: none
+    server: full
+    columns:
+    - name: team_no
+      admin_ui: {width: 200}
+      type: number
+    - name: team_name
+      admin_ui: {width: 200}
+      type: string
+    - name: team_score
+      admin_ui: {width: 200}
+      type: number
 renamed: true
