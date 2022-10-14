@@ -18,3 +18,8 @@ class Home(HomeTemplate):
 		score = int(self.score_text_box.text)
 		for i in anvil.server.call('set_play_score', team_no, score):
 			alert(dict(i))
+
+    def add_team(self, **event_args):
+        """This method is called when the button is clicked"""
+        pass
+

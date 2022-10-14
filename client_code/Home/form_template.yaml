@@ -24,8 +24,28 @@ components:
   components:
   - type: TextBox
     properties: {}
-    name: score_text_box
-    layout_properties: {grid_position: 'WAAZJH,ILHSYH'}
+    name: team_1
+    layout_properties: {grid_position: 'WAAZJH,EWKITR'}
+  - type: TextBox
+    properties: {}
+    name: team_2
+    layout_properties: {grid_position: 'WAAZJH,XZAKBD'}
+  - type: TextBox
+    properties: {}
+    name: team_name
+    layout_properties: {grid_position: 'PUOJLM,HGGOBX'}
+  - type: TextBox
+    properties: {}
+    name: score
+    layout_properties: {grid_position: 'AYICGM,BWNUPB'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add team, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: add_team
+    layout_properties: {grid_position: 'OOUBVM,REPSRL'}
+    event_bindings: {click: add_team}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Set score, font_size: null, font: '', spacing_above: small,
@@ -34,6 +54,22 @@ components:
     name: score_button
     layout_properties: {grid_position: 'OOUBVM,FVRAHH'}
     event_bindings: {click: on_score_button_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Easy, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: easy
+    layout_properties: {grid_position: 'OOUBVM,PATXXA'}
+    event_bindings: {click: on_easy_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Hard, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: hard
+    layout_properties: {grid_position: 'OOUBVM,FNXSUY'}
+    event_bindings: {click: on_hard_click}
   - type: Label
     properties: {}
     name: score_label
