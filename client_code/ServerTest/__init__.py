@@ -20,7 +20,7 @@ class ServerTest(ServerTestTemplate):
 	def on_score_button_click(self, **event_args):
 		"""This method is called when the button is clicked"""
 		team_no = int(self.team_1.text)
-		score = int(self.score_text_box.text)
+		score = int(self.score.text)
 		print(anvil.server.call('set_score', team_no, score))
 
 	def on_easy_click(self, **event_args):
