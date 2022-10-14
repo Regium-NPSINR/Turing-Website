@@ -65,14 +65,6 @@ components:
         underline: false, icon: ''}
       name: time_remaining
       layout_properties: {grid_position: 'OATYED,TYYFRP'}
-  - type: Button
-    properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Start Timer, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: timer_button
-    layout_properties: {grid_position: 'NQJDUR,YJIHQX ETDIYH,TUUEAW'}
-    event_bindings: {click: timer_button_click}
 - type: Timer
   properties: {interval: 0}
   name: timer_1

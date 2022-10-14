@@ -19,15 +19,3 @@ class Form1(Form1Template):
         """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
         self.time_left -= 1
         self.time_remaining.text = str(timedelta(seconds=self.time_left))
-    
-    def timer_button_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        if self.timer_button.text == "Start Timer":
-            self.timer_1.interval = 1
-            self.timer_button.text == "Pause Timer"
-        elif self.timer_button.text == "Pause Timer":
-            self.timer_1.interval = 0
-            self.timer_button.text = "Start Timer"
-          
-
-
