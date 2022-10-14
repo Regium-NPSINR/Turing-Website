@@ -17,4 +17,5 @@ class Home(HomeTemplate):
 		team_no = 0
 		score = int(self.score_text_box.text)
 		for i in anvil.server.call('set_play_score', team_no, score):
+			alert(str(i))
 			alert(f'Team no.: {i[0]}\nTeam name: {i[1]}\nScore: {i[2]}')

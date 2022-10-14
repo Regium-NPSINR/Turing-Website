@@ -21,5 +21,9 @@ import anvil.server
 def set_play_score(team_no, score):
 	# set team's score to new score
 	print(team_no, score)
-	app_tables.leaderboard.add_row((team_no, 'Test Team', score))
+	app_tables.leaderboard.add_row(
+        team_no = team_no, 
+        team_name = 'Test Team',
+        team_score = score
+    )
 	return app_tables.leaderboard.search()
