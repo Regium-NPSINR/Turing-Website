@@ -3,13 +3,13 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: null
+startup: {type: form, module: Home}
 package_name: Regium_Turing_Anvil_Leaderboard
 allow_embedding: false
 name: Regium-Turing-Anvil-Leaderboard
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {title: Turing Leaderboard}
-startup_form: Form1
+startup_form: null
 db_schema: {}
 renamed: true
