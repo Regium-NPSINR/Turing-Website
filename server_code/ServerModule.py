@@ -18,7 +18,6 @@ import anvil.server
 
 @anvil.server.callable
 def add_team(team_no, team_name):
-	return 'Called'
 	# check if the team exists
 	if app_tables.leaderboard.get(team_no = team_no) != None:
 		return False
@@ -40,7 +39,7 @@ def set_score(team_no, score):
 		return False
 	
 	# Team already exists
-	app_tables.leaderboard.get(team_no = team_no)[team_score] = score
+	app_tables.leaderboard.get(team_no = team_no)['team_score'] = score
 	return True
 
 @anvil.server.callable
@@ -52,7 +51,7 @@ def solve_easy(team_no):
 	# Team already exists
 	print(app_tables.leaderboard.get(team_no = team_no))
 	print(dict(app_tables.leaderboard.get(team_no = team_no)))
-	app_tables.leaderboard.get(team_no = team_no)[team_score] += 1
+	app_tables.leaderboard.get(team_no = team_no)['team_score'] += 1
 	return True
 
 @anvil.server.callable
@@ -63,8 +62,8 @@ def solve_hard(team_no_1, team_no_2):
 		return False
 
 	# Teams already exists
-	app_tables.leaderboard.get(team_no = team_no_1)[team_score] += 1
-	app_tables.leaderboard.get(team_no = team_no_2)[team_score] -= 1
+	app_tables.leaderboard.get(team_no = team_no_1)['team_score'] += 1
+	app_tables.leaderboard.get(team_no = team_no_2)['team_score'] -= 1
 	return True
 
 @anvil.server.callable
@@ -74,4 +73,4 @@ def get_score(team_no):
 		return False
 
 	# Team exists
-	return app_tables.leaderboard.get(team_no = team_no)[team_score]
+	return app_tables.leaderboard.get(team_no = team_no)['team_score']
