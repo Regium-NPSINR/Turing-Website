@@ -13,7 +13,7 @@ class Form1(Form1Template):
         self.init_components(**properties)
     
         # Any code you write here will run when the form opens.
-        self.repeating_panel_employees.items = anvil.server.call('get_values')
+        self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 
         # Initialize timer
         self.time_left = 648000
