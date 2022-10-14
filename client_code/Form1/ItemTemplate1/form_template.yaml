@@ -13,9 +13,13 @@ components:
     properties: {}
     name: team
     layout_properties: {grid_position: 'LTUAXU,ASRXXZ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''team_name'']'}
   - type: Label
     properties: {}
     name: points
     layout_properties: {grid_position: 'LTUAXU,HSKZUA'}
+    data_bindings:
+    - {property: text, code: 'self.item[''team_score'']'}
 is_package: true
 component: []

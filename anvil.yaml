@@ -3,14 +3,14 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: ServerTest}
+startup: {type: form, module: Form1}
 package_name: Regium_Turing_Anvil_Leaderboard
 allow_embedding: false
 name: Regium-Turing-Anvil-Leaderboard
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {title: Turing Leaderboard}
-startup_form: Form1
+startup_form: null
 db_schema:
   leaderboard:
     title: Leaderboard
@@ -26,27 +26,4 @@ db_schema:
     - name: team_score
       admin_ui: {width: 200}
       type: number
-  users:
-    title: Users
-    client: none
-    server: full
-    columns:
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {width: 200}
-      type: bool
-    - name: last_login
-      admin_ui: {width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {width: 200}
-      type: string
-    - name: n_password_failures
-      admin_ui: {width: 200}
-      type: number
-    - name: confirmed_email
-      admin_ui: {width: 200}
-      type: bool
 renamed: true
