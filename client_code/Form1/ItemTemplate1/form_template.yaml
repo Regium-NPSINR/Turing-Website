@@ -6,7 +6,7 @@ components:
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ASRXXZ":50,"HSKZUA":10}',
     spacing_below: small, background: ''}
-  name: outlined_card_1
+  name: list_item
   layout_properties: {grid_position: 'JMDBUP,PJRAOD'}
   components:
   - type: Label
