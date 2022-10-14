@@ -3,7 +3,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: null
+startup: {type: form, module: ServerTest}
 package_name: Regium_Turing_Anvil_Leaderboard
 allow_embedding: false
 name: Regium-Turing-Anvil-Leaderboard
