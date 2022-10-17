@@ -23,10 +23,13 @@ db_schema:
     - name: team_score
       admin_ui: {width: 200}
       type: number
-  table_2:
-    title: Table 2
+  timer:
+    title: Timer
     client: none
     server: full
-    columns: []
+    columns:
+    - name: time_left
+      admin_ui: {width: 200}
+      type: number
 uplink_visible: true
 renamed: true
