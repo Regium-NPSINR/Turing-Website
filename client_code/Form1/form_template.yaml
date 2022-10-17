@@ -74,6 +74,7 @@ components:
   properties: {interval: 0}
   event_bindings: {tick: timer_1_tick}
   name: timer_1
-- name: timer_2
+- name: leaderboard_refresh_timer
   type: Timer
   properties: {interval: 0.5}
+  event_bindings: {tick: leaderboard_refresh_timer_tick}

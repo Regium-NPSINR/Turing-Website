@@ -30,3 +30,8 @@ class Form1(Form1Template):
 		"""This method updates the leaderboard"""
 		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 		self.refresh_data_bindings()
+
+    def leaderboard_refresh_timer_tick(self, **event_args):
+        """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+        self.update_leaderboard()
+
