@@ -17,16 +17,11 @@ import anvil.server
 #
 
 @anvil.server.callable
-def add_team(team_no, team_name):
-	# check if the team exists
-	if app_tables.leaderboard.get(team_no = team_no) != None:
-		return False
-	
+def add_team(team_name):
 	if app_tables.leaderboard.get(team_name = team_name) != None:
 		return False
 
 	app_tables.leaderboard.add_row(
-		team_no = team_no, 
 		team_name = team_name,
 		team_score = 0
 	)
