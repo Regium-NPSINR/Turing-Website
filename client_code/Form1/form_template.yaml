@@ -5,16 +5,6 @@ container:
     role: null, html: '@theme:standard-page.html'}
   event_bindings: {}
 components:
-- type: RichText
-  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-    foreground: '', visible: true, font_size: null, content: '# Regium ''22 - Turing
-
-      ###
-
-      ', font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-    format: markdown}
-  layout_properties: {slot: title}
-  name: leaderboard_title
 - type: ColumnPanel
   properties: {col_widths: '{"YJIHQX":15}'}
   layout_properties: {slot: default}
@@ -70,3 +60,14 @@ components:
   properties: {interval: 0}
   event_bindings: {tick: timer_1_tick}
   name: timer_1
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {slot: title}
+  components:
+  - type: RichText
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: '# Turing', font: '',
+      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+    name: leaderboard_title
+    layout_properties: {grid_position: 'PGBMIR,LWJSON'}
