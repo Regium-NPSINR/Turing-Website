@@ -13,61 +13,61 @@ components:
 
       ', font: '', spacing_above: small, spacing_below: small, data: null, background: '',
     format: markdown}
-  name: leaderboard_title
   layout_properties: {slot: title}
+  name: leaderboard_title
 - type: ColumnPanel
   properties: {col_widths: '{"YJIHQX":15}'}
-  name: column_panel_1
   layout_properties: {slot: default}
+  name: column_panel_1
   components:
   - type: RepeatingPanel
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate1,
       background: ''}
-    name: leaderboard_list
     layout_properties: {grid_position: 'NQJDUR,VARCLA'}
     data_bindings:
-    - {property: items, code: 'self.item[''team_name'']'}
+    - {code: 'self.item[''team_name'']', property: items}
+    name: leaderboard_list
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
-    name: flags_card
     layout_properties: {grid_position: 'NQJDUR,YJIHQX HKEHWL,DHTAFM'}
+    name: flags_card
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Flags remaining:', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
-      name: flags_left_label
       layout_properties: {grid_position: 'FQLWVM,UKLCQG'}
+      name: flags_left_label
     - type: Label
       properties: {}
-      name: flags_left
       layout_properties: {grid_position: 'FQLWVM,GSGQUB'}
+      name: flags_left
   - type: Spacer
     properties: {height: 2}
-    name: spacer_1
     layout_properties: {grid_position: 'NQJDUR,YJIHQX XOPLUO,JUDMCQ'}
+    name: spacer_1
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
-    name: timer_card
     layout_properties: {grid_position: 'NQJDUR,YJIHQX RGVXEK,ERNPNM'}
+    name: timer_card
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Time remaining:', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
-      name: time_remaining_label
       layout_properties: {grid_position: 'UODATW,BTZMMR'}
+      name: time_remaining_label
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
-      name: time_remaining
       layout_properties: {grid_position: 'OATYED,TYYFRP'}
+      name: time_remaining
 - type: Timer
   properties: {interval: 0}
-  name: timer_1
   event_bindings: {tick: timer_1_tick}
+  name: timer_1

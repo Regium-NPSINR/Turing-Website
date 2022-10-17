@@ -13,6 +13,9 @@ class Form1(Form1Template):
         self.init_components(**properties)
     
         # Any code you write here will run when the form opens.
+        self.leaderboard_list.items = anvil.server.call('get_leaderboard')
+
+        # Initialize timer
         self.time_left = 648000
     
     def timer_1_tick(self, **event_args):
