@@ -25,8 +25,7 @@ components:
       visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate1,
       background: ''}
     layout_properties: {grid_position: 'NQJDUR,VARCLA'}
-    data_bindings:
-    - {code: 'self.item[''team_name'']', property: items}
+    data_bindings: []
     name: leaderboard_list
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
