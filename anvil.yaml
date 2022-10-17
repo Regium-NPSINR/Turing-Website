@@ -23,5 +23,10 @@ db_schema:
     - name: team_score
       admin_ui: {width: 200}
       type: number
+  table_2:
+    title: Table 2
+    client: none
+    server: full
+    columns: []
 uplink_visible: true
 renamed: true
