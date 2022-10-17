@@ -7,18 +7,27 @@ from anvil.tables import app_tables
 from datetime import timedelta
 
 class Form1(Form1Template):
-    
-    def __init__(self, **properties):
-        # Set Form properties and Data Bindings.
-        self.init_components(**properties)
-    
-        # Any code you write here will run when the form opens.
-        self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 
-        # Initialize timer
-        self.time_left = 648000
-    
-    def timer_1_tick(self, **event_args):
-        """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-        self.time_left -= 1
-        self.time_remaining.text = str(timedelta(seconds=self.time_left))
+	def __init__(self, **properties):
+		# Set Form properties and Data Bindings.
+		self.init_components(**properties)
+
+		# Any code you write here will run when the form opens.
+		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
+
+		# Initialize timer
+		self.time_left = 648000
+
+	def timer_1_tick(self, **event_args):
+		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+		self.time_left -= 1
+		self.time_remaining.text = str(timedelta(seconds=self.time_left))
+
+	def on_refresh_leaderboard(self, **event_args):
+		"""This method is called when the refresh_leaderboard button is called"""
+		self.update_leaderboard()
+	
+	def update_leaderboard(self):
+		"""This method updates the leaderboard"""
+		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
+		self.refresh_data_bindings()
