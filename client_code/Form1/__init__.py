@@ -16,7 +16,7 @@ class Form1(Form1Template):
         self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 
         # Initialize timer
-        self.time_left = 
+        self.time_left = 648000
     
     def timer_1_tick(self, **event_args):
         """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
