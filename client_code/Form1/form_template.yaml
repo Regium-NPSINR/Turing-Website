@@ -74,3 +74,6 @@ components:
   properties: {interval: 0}
   event_bindings: {tick: timer_1_tick}
   name: timer_1
+- name: timer_2
+  type: Timer
+  properties: {interval: 0.5}
