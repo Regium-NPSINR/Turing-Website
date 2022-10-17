@@ -14,9 +14,16 @@ components:
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate1,
       background: ''}
-    layout_properties: {grid_position: 'NQJDUR,VARCLA'}
-    data_bindings: []
+    layout_properties: {grid_position: 'NQJDUR,VARCLA IGRUYJ,NOVPQZ'}
     name: leaderboard_list
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Update Leaderboard, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    layout_properties: {grid_position: 'NQJDUR,VARCLA LPWHHW,IYXTJR'}
+    event_bindings: {click: refresh_leaderboard}
+    name: refresh_leaderboard
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
     layout_properties: {grid_position: 'NQJDUR,YJIHQX HKEHWL,DHTAFM'}
