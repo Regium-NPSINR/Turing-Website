@@ -176,9 +176,9 @@ color: %color:On Primary Container%;
   top: %anvil-banner-height%;
   right: 0;
   left: 0;
-/*   flex: 0 0;
+  flex: 0 0;
   flex-basis: auto;
-  flex-basis: content; */
+  flex-basis: content;
 }
 
 .nav-holder {
