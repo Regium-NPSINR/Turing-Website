@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import timedelta
+import datetime as dt
 
 class Form1(Form1Template):
 	def __init__(self, **properties):
@@ -15,12 +15,12 @@ class Form1(Form1Template):
 		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 
 		# Initialize timer
-		self.time_left = 648000
+		self.time_left = app_tables.timer.get(id=1)['time_left']
 
 	def timer_1_tick(self, **event_args):
 		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
 		self.time_left -= 1
-		self.time_remaining.text = str(timedelta(seconds=self.time_left))
+		self.time_remaining.text = datetime.strptime(timedelta(seconds=self.time_left), '%I:%M')
 
 	def on_refresh_leaderboard(self, **event_args):
 		"""This method is called when the refresh_leaderboard button is called"""
@@ -30,3 +30,8 @@ class Form1(Form1Template):
 		"""This method updates the leaderboard"""
 		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 		self.refresh_data_bindings()
+
+	def leaderboard_refresh_timer_tick(self, **event_args):
+		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+		self.update_leaderboard()
+
