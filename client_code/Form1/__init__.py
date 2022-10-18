@@ -20,8 +20,7 @@ class Form1(Form1Template):
 	def timer_1_tick(self, **event_args):
 		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
 		self.time_left -= 1
-        t = datetime.strptime(timedelta(seconds=self.time_left)), '%H:%M:%S')
-		self.time_remaining.text = t.strftime("%H:%M")
+        self.time_remaining.text = datetime.strptime(str(timedelta(seconds=self.time_left)), '%H:%M:%S').strftime("%M:%S" if self.time_left < 3600 else "%H:%M")
 
 	def on_refresh_leaderboard(self, **event_args):
 		"""This method is called when the refresh_leaderboard button is called"""
