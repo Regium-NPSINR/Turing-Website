@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import datetime as dt
+from datetime import datetime, timedelta
 
 class Form1(Form1Template):
 	def __init__(self, **properties):
@@ -20,7 +20,7 @@ class Form1(Form1Template):
 	def timer_1_tick(self, **event_args):
 		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
 		self.time_left -= 1
-		self.time_remaining.text = datetime.strptime(timedelta(seconds=self.time_left), '%I:%M')
+		self.time_remaining.text = datetime.strptime(str(timedelta(seconds=self.time_left)), '%I:%M:%S').strftime("%I:%M")
 
 	def on_refresh_leaderboard(self, **event_args):
 		"""This method is called when the refresh_leaderboard button is called"""
