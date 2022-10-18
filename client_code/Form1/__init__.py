@@ -13,6 +13,8 @@ class Form1(Form1Template):
 
 		# Any code you write here will run when the form opens.
 		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
+		self.total_flags = 50
+		self.flags_left.text = self.total_flags
 
 		# Initialize timer
 		self.end_time = datetime(2022, 10, 18, 14, 14)
@@ -35,4 +37,6 @@ class Form1(Form1Template):
 	def leaderboard_refresh_timer_tick(self, **event_args):
 		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
 		self.update_leaderboard()
+		self.flags_left.text = str(self.total_flags - sum([r['team_score'] for r in self.leaderboard_list.items]))
+        
 

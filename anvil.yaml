@@ -23,16 +23,5 @@ db_schema:
     - name: team_score
       admin_ui: {width: 200}
       type: number
-  timer:
-    title: Timer
-    client: full
-    server: full
-    columns:
-    - name: id
-      admin_ui: {width: 200}
-      type: number
-    - name: time_left
-      admin_ui: {width: 200}
-      type: number
 uplink_visible: true
 renamed: true

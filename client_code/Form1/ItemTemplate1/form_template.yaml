@@ -19,7 +19,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''team_name'']'}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 20, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
