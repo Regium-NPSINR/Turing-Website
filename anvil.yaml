@@ -25,7 +25,7 @@ db_schema:
       type: number
   timer:
     title: Timer
-    client: none
+    client: full
     server: full
     columns:
     - name: id
