@@ -15,12 +15,12 @@ class Form1(Form1Template):
 		self.leaderboard_list.items = anvil.server.call('get_leaderboard')
 
 		# Initialize timer
-		self.time_left = app_tables.timer.get(id=1)['time_left']
+		self.end_time = datetime(2022, 10, 18, 13, 55)
 
 	def timer_1_tick(self, **event_args):
 		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-		self.time_left -= 1
-		self.time_remaining.text = datetime.strptime(str(timedelta(seconds=self.time_left)), '%H:%M:%S').strftime("%M:%S" if self.time_left < 3600 else "%H:%M")
+		self.time_remaining.text = datetime.fromtimestamp((self.end_time - datetime.now()).total_seconds() - 19800).strftime("%M:%S" if (self.end_time - datetime.now()).total_seconds() < 3600 else "%H:%M")
+    
 
 	def on_refresh_leaderboard(self, **event_args):
 		"""This method is called when the refresh_leaderboard button is called"""
