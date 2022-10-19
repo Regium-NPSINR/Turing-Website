@@ -25,9 +25,12 @@ db_schema:
       type: number
   timer:
     title: Timer
-    client: none
+    client: full
     server: full
     columns:
+    - name: id
+      admin_ui: {width: 200}
+      type: number
     - name: time_left
       admin_ui: {width: 200}
       type: number

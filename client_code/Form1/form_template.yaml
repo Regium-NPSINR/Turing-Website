@@ -21,16 +21,8 @@ components:
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: Form1.ItemTemplate1,
       background: ''}
-    layout_properties: {grid_position: 'NQJDUR,VARCLA IGRUYJ,NOVPQZ'}
+    layout_properties: {grid_position: 'NQJDUR,VARCLA'}
     name: leaderboard_list
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Update Leaderboard, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    layout_properties: {grid_position: 'NQJDUR,VARCLA LPWHHW,IYXTJR'}
-    event_bindings: {click: on_refresh_leaderboard}
-    name: refresh_leaderboard
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
     layout_properties: {grid_position: 'NQJDUR,YJIHQX HKEHWL,DHTAFM'}
@@ -38,9 +30,9 @@ components:
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Flags remaining:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        visible: true, text: "\ud83d\udea9 Flags remaining:", font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'FQLWVM,UKLCQG'}
       name: flags_left_label
     - type: Label
@@ -58,7 +50,7 @@ components:
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Time remaining:', font_size: null, font: '', spacing_above: small,
+        visible: true, text: '⏱️ Time remaining:', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       layout_properties: {grid_position: 'UODATW,BTZMMR'}
@@ -71,6 +63,10 @@ components:
       layout_properties: {grid_position: 'OATYED,TYYFRP'}
       name: time_remaining
 - type: Timer
-  properties: {interval: 0}
+  properties: {interval: 1}
   event_bindings: {tick: timer_1_tick}
   name: timer_1
+- name: leaderboard_refresh_timer
+  type: Timer
+  properties: {interval: 5}
+  event_bindings: {tick: leaderboard_refresh_timer_tick}
