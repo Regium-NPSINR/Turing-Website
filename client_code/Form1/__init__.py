@@ -38,3 +38,5 @@ class Form1(Form1Template):
         """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
         self.update_leaderboard()
         self.flags_left.text = str(self.total_flags - sum([r['team_score'] for r in self.leaderboard_list.items]))
+        
+
