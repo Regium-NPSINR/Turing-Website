@@ -24,7 +24,7 @@ class Form1(Form1Template):
 		"""This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
 		self.time_remaining.text = datetime.fromtimestamp((self.end_time - datetime.now()).total_seconds() - 19800).strftime("%M:%S" if (self.end_time - datetime.now()).total_seconds() < 3600 else "%H:%M")
 		self.timer_1.interval = 0 if self.time_remaining.text == '00:00' else 1
-        
+
 	def on_refresh_leaderboard(self, **event_args):
 		"""This method is called when the refresh_leaderboard button is called"""
 		self.update_leaderboard()
