@@ -71,9 +71,8 @@ def get_score(team_name):
     return app_tables.leaderboard.get(team_name = team_name)['team_score']
 
 @anvil.server.callable
-def get_leaderboard():
+def get_leaderboard(form):
     return sorted(
             app_tables.leaderboard.search(),
-            key = lambda x: (x['team_score'], x['team_name']),
-            reverse = True
+            key = lambda x: (-x['team_score'], x['team_name']),
         )
